@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+
+{% extends 'rango/base.html' %}
+{% load static %}
+
+<html>
+<head>
+    <title>{% block title %}Restricted page{% endblock %}</title>
+</head>
+<body>
+    {% block body_block %}
+        <p>
+            Since you're logged in you can see this text
+        </p>
+    {% endblock %}
+</body>
+</html>

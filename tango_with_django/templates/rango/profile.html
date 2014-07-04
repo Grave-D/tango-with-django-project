@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+
+{% extends 'rango/base.html' %}
+{% load static %}
+
+<html>
+<head>
+    <title>{% block title %}Welcome, {{ user.username }}{% endblock %}</title>
+</head>
+<body>
+    {% block body_block %}
+        <div class="hero-unit">
+            <div class="container">
+                <p>Your website: {{ basic_user.website }}</p>
+                <p>Your email: {{ basic_user.email }}</p>
+                {% if user_profile.picture %}
+                    Your picture: <img src="media/{{ user_profile.picture }}" alt="Cannot load the picture"> <br>
+                {% endif %}
+            </div>
+        </div>
+    {% endblock %}
+</body>
+</html>

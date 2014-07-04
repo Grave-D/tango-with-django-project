@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+
+{% extends 'rango/base.html' %}
+{% load static %}
+
+<html>
+<head>
+    <title>{% block title %}About{% endblock %}</title>
+</head>
+<body>
+    {% block body_block %}
+        <div class="hero-unit">
+            <h1>About Rango</h1>
+            This is <strong>Rango about page</strong>.<br/>
+            You've visited us {{ visits }} time(s).<br/>
+            Last visit: {{ last_visit_time }}<br/>
+            Here's Konata for no apperent reason <strong>:3</strong>
+            <img src="{% static "Konata.jpg" %}" alt="Kona-chan"><br/>
+            </div>
+    {% endblock %}
+</body>
+</html>

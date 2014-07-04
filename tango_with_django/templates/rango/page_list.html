@@ -1,0 +1,11 @@
+<div class="pages">
+    {% if pages %}
+        <ul>
+            {% for page in pages %}
+                <li><a href="/rango/goto/{{ page.id }}">{{ page.title }}</a></li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <strong>No pages currently in category {{ category_name }}.</strong>
+    {% endif %}
+</div>
